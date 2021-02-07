@@ -12,9 +12,13 @@ Following ar71xx/ar724x devices are supported:
 * WNDR3700v1 (u)
 * WNDR3700v2 (v1h2)
 
-Compilation requires MIPS toolchain when cross-building on Linux running Intel CPU. Personally I use QEMU i386 Virtual Machine with Slackware 13.37 32-bit and old u-boot recommended MIPS GCC compiler/linker.
+Compilation requires MIPS toolchain when cross-building on Linux running Intel/AMD CPU. 
+Personally I use docker image Slackware 13.37 64-bit and old u-boot recommended MIPS GCC 4.8 compiler/linker.
 
-This source supports building images for 4, 8 and 16 MB flash sizes so all above devices can be modded and equipped with more flash storage than in original model. Please note that this requires access to SPI NOR flash programmer, soldering skills and knowledge what to do more (ART backup!).
+This source supports building images for 4, 8 and 16 MB flash sizes so all above devices can be modded and equipped with more flash storage than in original model. 
+Please restore ART.bin to new flash before you flash this uboot 
+
+
 
 See README.netgear for build instructions.
 
