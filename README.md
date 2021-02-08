@@ -1,25 +1,34 @@
-This is modified u-boot source for selected Netgear routers based on Atheros SoC and Wifi chips.
+<center> <h1> U-BOOT For Selected Netgear Routers </h1> </center>
 
-I have collected GPL sources from Netgear website, extracted u-boot part from them and compiled into one tree.
-I also did a cleanup: there are no compilation errors, warnings, ambigous assignments, unnecessary redundancy.
-
-Following ar71xx/ar724x devices are supported:
-
-* WNR2000v3
-* WNR612v2
-* WNR1000v2 (v2h2)
-* WNR2200
-* WNDR3700v1 (u)
-* WNDR3700v2 (v1h2)
-
-Compilation requires MIPS toolchain when cross-building on Linux running Intel/AMD CPU. 
-Personally I use docker image Slackware 13.37 64-bit and old u-boot recommended MIPS GCC 4.8 compiler/linker.
-
-This source supports building images for 4, 8 and 16 MB flash sizes so all above devices can be modded and equipped with more flash storage than in original model. 
-Please restore ART.bin to new flash before you flash this uboot 
+**[realmicu]** >> *"This is modified u-boot source for selected Netgear routers based on Atheros SoC and Wifi chips."*
 
 
 
-See README.netgear for build instructions.
+### Support Devices
 
-Loader flashing from u-boot prompt (console access required) is described in README.flash.
+| Model             | SoC            | CPU Cores | CPU MHZ | Comments network ports |
+| ----------------- | -------------- | --------- | ------- | ---------------------- |
+| WNR612V2          | Atheros AR7240 | 1         | 400     | 1 WAN + 2x LAN         |
+| WNR1000V2 (v2h2)  | Atheros AR7240 | 1         | 400     | 1 WAN + 4x LAN         |
+| WNR2000V3         | Atheros AR7241 | 1         | 400     | 1 WAN + 4x LAN         |
+| WNR2200           | Atheros AR7241 | 1         | 360     | 1 WAN + 4x LAN         |
+| WNDR3700V1 (u)    | Atheros AR7161 | 1         | 680     | 1 WAN + 4x LAN         |
+| WNDR3700V2 (v1h2) | Atheros AR7161 | 1         | 680     | 1 WAN + 4x LAN         |
+
+
+
+### Build Environment
+
+| Operating System | Toolchains                                                   |
+| ---------------- | ------------------------------------------------------------ |
+| Ubuntu Focal     | [OpenWrt SDK for AR71xx MIPS (Chaos Calmer release)](https://downloads.openwrt.org/chaos_calmer/15.05.1/ar71xx/generic/OpenWrt-SDK-15.05.1-ar71xx-generic_gcc-4.8-linaro_uClibc-0.9.33.2.Linux-x86_64.tar.bz2) |
+
+
+
+### Notice
+
+**Please restore ART.bin to new flash before you flash this uboot !!!**
+
+**See README.netgear for build instructions.**
+
+**Loader flashing from u-boot prompt (console access required) is described in README.flash.**
