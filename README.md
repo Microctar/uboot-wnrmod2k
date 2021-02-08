@@ -1,6 +1,12 @@
 <center> <h1> U-BOOT For Selected Netgear Routers </h1> </center>
 
+
+
 **[realmicu]** >> *"This is modified u-boot source for selected Netgear routers based on Atheros SoC and Wifi chips."*
+
+
+
+### *Rewrite Information*
 
 
 
